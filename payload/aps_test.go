@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/RobotsAndPencils/buford/payload"
-	"github.com/RobotsAndPencils/buford/payload/badge"
+	"github.com/ken0nek/buford/payload"
+	"github.com/ken0nek/buford/payload/badge"
 )
 
 func ExampleAPS() {
@@ -90,6 +90,13 @@ func TestPayload(t *testing.T) {
 				MutableContent: true,
 			},
 			[]byte(`{"aps":{"alert":"Change is coming","mutable-content":1}}`),
+		},
+		{
+			payload.APS{
+				Alert:    payload.Alert{Body: "Grouped notification"},
+				ThreadID: "thread-id-1",
+			},
+			[]byte(`{"aps":{"alert":"Grouped notification","thread-id":"thread-id-1"}}`),
 		},
 	}
 

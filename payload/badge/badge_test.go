@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/RobotsAndPencils/buford/payload/badge"
+	"github.com/ken0nek/buford/payload/badge"
 )
 
 func Example() {

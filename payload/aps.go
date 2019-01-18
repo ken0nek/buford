@@ -3,7 +3,7 @@ package payload
 import (
 	"encoding/json"
 
-	"github.com/RobotsAndPencils/buford/payload/badge"
+	"github.com/ken0nek/buford/payload/badge"
 )
 
 // APS is Apple's reserved namespace.
@@ -29,6 +29,9 @@ type APS struct {
 
 	// Mutable is used for Service Extensions introduced in iOS 10.
 	MutableContent bool
+
+	// Thread identifier to create notification groups in iOS 12 or newer.
+	ThreadID string
 }
 
 // Alert dictionary.
@@ -92,6 +95,10 @@ func (a *APS) Map() map[string]interface{} {
 	}
 	if a.MutableContent {
 		aps["mutable-content"] = 1
+	}
+
+	if a.ThreadID != "" {
+		aps["thread-id"] = a.ThreadID
 	}
 
 	// wrap in "aps" to form the final payload

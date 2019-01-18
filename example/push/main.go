@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/RobotsAndPencils/buford/certificate"
-	"github.com/RobotsAndPencils/buford/payload"
-	"github.com/RobotsAndPencils/buford/payload/badge"
-	"github.com/RobotsAndPencils/buford/push"
+	"github.com/ken0nek/buford/certificate"
+	"github.com/ken0nek/buford/payload"
+	"github.com/ken0nek/buford/payload/badge"
+	"github.com/ken0nek/buford/push"
 )
 
 func main() {

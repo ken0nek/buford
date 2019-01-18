@@ -2,15 +2,15 @@
 
 Apple Push Notification (APN) Provider library for Go 1.6 and HTTP/2. Send remote notifications to iOS, macOS, tvOS and watchOS. Buford can also sign push packages for Safari notifications and Wallet passes.
 
-Please see [releases](https://github.com/RobotsAndPencils/buford/releases) for updates.
+Please see [releases](https://github.com/ken0nek/buford/releases) for updates.
 
-[![GoDoc](https://godoc.org/github.com/RobotsAndPencils/buford?status.svg)](https://godoc.org/github.com/RobotsAndPencils/buford) [![Build Status](https://travis-ci.org/RobotsAndPencils/buford.svg?branch=ci)](https://travis-ci.org/RobotsAndPencils/buford) ![MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![codecov](https://codecov.io/gh/RobotsAndPencils/buford/branch/master/graph/badge.svg)](https://codecov.io/gh/RobotsAndPencils/buford)
+[![GoDoc](https://godoc.org/github.com/ken0nek/buford?status.svg)](https://godoc.org/github.com/ken0nek/buford) [![Build Status](https://travis-ci.org/ken0nek/buford.svg?branch=ci)](https://travis-ci.org/ken0nek/buford) ![MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![codecov](https://codecov.io/gh/ken0nek/buford/branch/master/graph/badge.svg)](https://codecov.io/gh/ken0nek/buford)
 
 ### Documentation
 
 Buford uses Apple's new HTTP/2 Notification API that was announced at WWDC 2015 and [released on December 17, 2015](https://developer.apple.com/news/?id=12172015b).
 
-[API documentation](https://godoc.org/github.com/RobotsAndPencils/buford/) is available from GoDoc.
+[API documentation](https://godoc.org/github.com/ken0nek/buford/) is available from GoDoc.
 
 Also see Apple's [Local and Remote Notification Programming Guide][notification], especially the sections on the JSON [payload][] and the [Notification API][notification-api].
 
@@ -41,7 +41,7 @@ Also see Apple's [Local and Remote Notification Programming Guide][notification]
 This library requires [Go 1.6.3](https://golang.org/dl/) or better.
 
 ```
-go get -u -d github.com/RobotsAndPencils/buford
+go get -u -d github.com/ken0nek/buford
 ```
 
 Buford depends on several packages outside of the standard library, including the http2 package. Its certificate package depends on the pkcs12 and pushpackage depends on pkcs7. They can be retrieved or updated with:
@@ -63,10 +63,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/RobotsAndPencils/buford/certificate"
-	"github.com/RobotsAndPencils/buford/payload"
-	"github.com/RobotsAndPencils/buford/payload/badge"
-	"github.com/RobotsAndPencils/buford/push"
+	"github.com/ken0nek/buford/certificate"
+	"github.com/ken0nek/buford/payload"
+	"github.com/ken0nek/buford/payload/badge"
+	"github.com/ken0nek/buford/push"
 )
 
 // set these variables appropriately
